@@ -19,11 +19,14 @@ class Personagem(object):
 
 
 personagem = Personagem()
-tempo = 0.01
+tempo = 0.02
 gravidade = -3.0
 i = 1
 while (True):
+    tempo_inicial = time()
+    
     personagem.update(tempo, gravidade)
+    sleep(0.01)
     
     print("Update número " + str(i))
     print(personagem.posição)
@@ -32,4 +35,8 @@ while (True):
     
     i = i + 1
     
-    sleep(0.01)
+    tempo_final = time()
+    
+    delta = tempo_final - tempo_inicial
+    
+    sleep(tempo - delta)
