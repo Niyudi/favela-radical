@@ -31,6 +31,6 @@ while (True):
     print(personagem.velocidade)
     print("")
     
-    sleep(tempo)
-    
     i = i + 1
+    
+    sleep(tempo)

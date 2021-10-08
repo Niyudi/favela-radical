@@ -2,17 +2,18 @@
 # -*- coding: utf-8 -*-
 
 #from -> de         import -> importar
-from PyQt5.QtWidgets import QApplication, QMainWindow
+from PyQt5.QtWidgets import QApplication
 
 #    sys -> sistema
 from sys import argv, exit
+
+from interface import JanelaPrincipal
 
 class Aplicativo(QApplication):
     def __init__(self, argv):
         super().__init__(argv)
         
-        self.window = QMainWindow()
-        self.window.show()
+        self.window = JanelaPrincipal()
 
 def main():
     app = Aplicativo(argv)
